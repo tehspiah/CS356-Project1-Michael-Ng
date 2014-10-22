@@ -1,15 +1,22 @@
+/*
+ * Michael Ng
+ * Yu Sun
+ * CS356
+ * Project 1: iClicker
+ */
+
 import java.util.*;
 
 public class SimulationDriver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		boolean MC = false;
+		boolean MC = false; //set if multiple choice question
 		String input;
 		Scanner kb = new Scanner(System.in);
 
 		System.out
-				.println("Do you want to ask a Multiple Choice question? y/n");
+				.println("Do you want to ask a Multiple Choice question? y/n");  //ask user if they want a multiple choice question
 		input = kb.nextLine();
 		input.toUpperCase();
 		if (input.equals("YES") || input.equals("Y"))
