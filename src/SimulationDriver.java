@@ -22,14 +22,14 @@ public class SimulationDriver {
 		if (input.equals("YES") || input.equals("Y"))
 			MC = true;
 
-		Student[] s = new Student[30];
-		iClicker c = new iClicker();
-		Questions q = new Questions();
+		Student[] s = new Student[30];  //create new student object
+		iClicker c = new iClicker();	//create new iclicker object
+		Questions q = new Questions();	//create new question object
 
-		for (int j = 0; j < 30; j++)
+		for (int j = 0; j < 30; j++)	//create 30/i student objects
 			s[j] = new Student();
 
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < 30; i++) {	//get students to answer questions
 			if (MC == true) {
 				c.addAnswer(s[i].getID(), s[i].submitMC());
 			} else {
@@ -37,12 +37,12 @@ public class SimulationDriver {
 			}
 		}
 
-		Object[] array = new Object[30];
+		Object[] array = new Object[30];	//create new object array to hold results
 		//System.out.print(c.map.values());
-		array = c.map.values().toArray();
-		q.setMC(MC);
-		q.addAnswer(array, 30);
-		q.printResults();
+		array = c.map.values().toArray();	
+		q.setMC(MC);	//set questions to multiple choice or T/F
+		q.addAnswer(array, 30);	//Count results
+		q.printResults();	//print counted results
 		
 
 	}

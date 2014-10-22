@@ -55,6 +55,9 @@ public class Student {
 
 	}
 
+	/*
+	 * Make student submit an answer for a True or False question
+	 */
 	public char submitTF() {
 		int answer;
 		char out = 0;
